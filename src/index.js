@@ -8,16 +8,27 @@ export const brainGames = () => {
 };
 
 // brain-even
-const getRandomInt = (min, max) => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+const getRandomInt = (a, b) => {
+  const min = Math.ceil(a);
+  const max = Math.floor(b);
   return Math.floor(Math.random() * (max - min)) + min;
 };
 
-const quiz = () => {
-  const question = getRandomInt(1, 99);
-  const answer = readlineSync.question(`Question: ${question}`);
+const quiz = (name) => {
+  for (let i = 0; i < 3; i += 1) {
+    const question = getRandomInt(1, 99);
+    const answer = readlineSync.question(`Question: ${question} `);
+    const isEven = question % 2 === 0;
 
+    console.log(`Your answer: ${answer}`);
+
+    if ((isEven && answer === 'yes') || (!isEven && answer === 'no')) {
+      console.log('Correct!');
+    } else {
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answer === 'yes' ? 'no' : 'yes'}'. Let's try again, ${name}`);
+    }
+  }
+  return console.log(`Congratulations, ${name}!`);
 };
 
 export const brainEven = () => {
@@ -27,5 +38,5 @@ export const brainEven = () => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!\n`);
 
-  quiz();
+  quiz(name);
 };
