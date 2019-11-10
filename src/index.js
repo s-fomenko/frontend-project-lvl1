@@ -42,3 +42,39 @@ export const brainEven = () => {
 };
 
 // brain-calc
+const calc = (name) => {
+  for (let i = 0; i < 3; i += 1) {
+    const num1 = getRandomInt(1, 100);
+    const num2 = getRandomInt(1, 100);
+    const type = getRandomInt(1, 3);
+    let result = 0;
+    let answer = '';
+
+    if (type === 1) {
+      answer = readlineSync.question(`${num1} + ${num2} `);
+      result = num1 + num2;
+    } else if (type === 2) {
+      answer = readlineSync.question(`${num1} - ${num2} `);
+      result = num1 - num2;
+    } else {
+      answer = readlineSync.question(`${num1} * ${num2} `);
+      result = num1 * num2;
+    }
+    if (Number(answer) === result) {
+      console.log('Correct!');
+    } else {
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}`);
+    }
+  }
+  return console.log(`Congratulations, ${name}!`);
+};
+
+export const brainCalc = () => {
+  console.log('Welcome to the Brain Games!');
+  console.log('What is the result of the expression?\n');
+
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!\n`);
+
+  calc(name);
+};
