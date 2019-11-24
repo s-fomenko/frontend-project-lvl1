@@ -1,4 +1,4 @@
-import { answerCheck, getRandomInt, question } from '../common';
+import { getRandomInt, question } from '../common';
 
 export default (name) => {
   for (let i = 0; i < 3; i += 1) {
@@ -21,7 +21,11 @@ export default (name) => {
 
     console.log(`Your answer: ${answer}`);
 
-    answerCheck(answer, result, name);
+    if (Number(answer) === result) {
+      console.log('Correct!');
+    } else {
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}`);
+    }
   }
   return console.log(`Congratulations, ${name}!`);
 };

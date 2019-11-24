@@ -7,5 +7,3 @@ export const getRandomInt = (a, b) => {
 };
 
 export const question = (text) => readlineSync.question(text);
-
-export const answerCheck = (answer, result, name) => ((Number(answer) === result) ? console.log('Correct!') : console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}`));
