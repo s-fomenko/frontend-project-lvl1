@@ -9,3 +9,5 @@ export const getRandomInt = (a, b) => {
 export const question = (text) => readlineSync.question(text);
 
 export const cons = (type, terms) => (func) => func(type, terms);
+
+export const isEven = (num) => num % 2 === 0;
