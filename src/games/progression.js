@@ -1,5 +1,4 @@
 import { getRandomInt, question, cons } from '../common';
-import game from '..';
 
 const brainProgression = (name) => {
   for (let i = 0; i < 3; i += 1) {
