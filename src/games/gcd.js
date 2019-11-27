@@ -1,6 +1,7 @@
 import { getRandomInt, question } from '../common';
+import game from '..';
 
-export default (name) => {
+const brainGcd =  (name) => {
   for (let i = 0; i < 3; i += 1) {
     const num1 = getRandomInt(1, 100);
     const num2 = getRandomInt(1, 100);
@@ -33,3 +34,6 @@ export default (name) => {
   }
   return console.log(`Congratulations, ${name}!`);
 };
+
+export default game(brainGcd, 'brainGcd');
+
