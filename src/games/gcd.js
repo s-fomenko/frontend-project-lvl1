@@ -1,7 +1,7 @@
 import { getRandomInt, question } from '../common';
 import game from '..';
 
-const brainGcd =  (name) => {
+const brainGcd = (name) => {
   for (let i = 0; i < 3; i += 1) {
     const num1 = getRandomInt(1, 100);
     const num2 = getRandomInt(1, 100);
@@ -36,4 +36,3 @@ const brainGcd =  (name) => {
 };
 
 export default game(brainGcd, 'brainGcd');
-

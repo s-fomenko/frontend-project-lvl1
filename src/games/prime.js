@@ -1,7 +1,7 @@
 import { getRandomInt, question } from '../common';
 import game from '..';
 
-const brainPrime =  (name) => {
+const brainPrime = (name) => {
   for (let i = 0; i < 3; i += 1) {
     const num = getRandomInt(1, 99);
     const answer = question(`Question: ${num} `);
