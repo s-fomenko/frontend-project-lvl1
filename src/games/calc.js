@@ -8,15 +8,18 @@ const brainCalc = (name) => {
     let result = 0;
     let answer = '';
 
-    if (type === 1) {
-      answer = question(`Question: ${num1} + ${num2} `);
-      result = num1 + num2;
-    } else if (type === 2) {
-      answer = question(`Question: ${num1} - ${num2} `);
-      result = num1 - num2;
-    } else {
-      answer = question(`Question: ${num1} * ${num2} `);
-      result = num1 * num2;
+    switch (type) {
+      case 1:
+        answer = question(`Question: ${num1} + ${num2} `);
+        result = num1 + num2;
+        break;
+      case 2:
+        answer = question(`Question: ${num1} - ${num2} `);
+        result = num1 - num2;
+        break;
+      default:
+        answer = question(`Question: ${num1} * ${num2} `);
+        result = num1 * num2;
     }
 
     console.log(`Your answer: ${answer}`);
