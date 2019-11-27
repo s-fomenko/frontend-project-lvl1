@@ -2,7 +2,10 @@
   "name": "frontend-project-lvl1",
   "version": "1.0.0",
   "description": "Set of math games",
-  "keywords": ["game", "math"],
+  "keywords": [
+    "game",
+    "math"
+  ],
   "main": "index.js",
   "bin": {
     "brain-even": "dist/bin/brain-even.js",

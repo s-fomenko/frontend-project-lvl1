@@ -1,6 +1,6 @@
-import { getRandomInt, question } from '../common';
+import { getRandomInt, question, cons } from '../common';
 
-export default (name) => {
+const brainProgression = (name) => {
   for (let i = 0; i < 3; i += 1) {
     const start = getRandomInt(1, 100);
     const step = getRandomInt(1, 10);
@@ -43,3 +43,5 @@ export default (name) => {
   }
   return console.log(`Congratulations, ${name}!`);
 };
+
+export default cons(brainProgression, 'brainProgression');

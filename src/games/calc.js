@@ -1,6 +1,6 @@
-import { getRandomInt, question } from '../common';
+import { getRandomInt, question, cons } from '../common';
 
-export default (name) => {
+const brainCalc = (name) => {
   for (let i = 0; i < 3; i += 1) {
     const num1 = getRandomInt(1, 100);
     const num2 = getRandomInt(1, 100);
@@ -8,15 +8,18 @@ export default (name) => {
     let result = 0;
     let answer = '';
 
-    if (type === 1) {
-      answer = question(`Question: ${num1} + ${num2} `);
-      result = num1 + num2;
-    } else if (type === 2) {
-      answer = question(`Question: ${num1} - ${num2} `);
-      result = num1 - num2;
-    } else {
-      answer = question(`Question: ${num1} * ${num2} `);
-      result = num1 * num2;
+    switch (type) {
+      case 1:
+        answer = question(`Question: ${num1} + ${num2} `);
+        result = num1 + num2;
+        break;
+      case 2:
+        answer = question(`Question: ${num1} - ${num2} `);
+        result = num1 - num2;
+        break;
+      default:
+        answer = question(`Question: ${num1} * ${num2} `);
+        result = num1 * num2;
     }
 
     console.log(`Your answer: ${answer}`);
@@ -29,3 +32,5 @@ export default (name) => {
   }
   return console.log(`Congratulations, ${name}!`);
 };
+
+export default cons(brainCalc, 'brainCalc');
