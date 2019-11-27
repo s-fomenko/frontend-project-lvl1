@@ -1,4 +1,4 @@
-import { getRandomInt, question } from '../common';
+import { getRandomInt, question, cons } from '../common';
 import game from '..';
 
 const brainProgression = (name) => {
@@ -45,4 +45,4 @@ const brainProgression = (name) => {
   return console.log(`Congratulations, ${name}!`);
 };
 
-export default game(brainProgression, 'brainProgression');
+export default cons(brainProgression, 'brainProgression');
