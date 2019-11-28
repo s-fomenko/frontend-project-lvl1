@@ -1,22 +1,9 @@
-import { getRandomInt, question, cons } from '../common';
+import { getRandomInt, question, cons, isprime } from '../common';
 
 const brainPrime = (name) => {
   for (let i = 0; i < 3; i += 1) {
     const num = getRandomInt(1, 99);
     const answer = question(`Question: ${num} `);
-
-    const isprime = (n) => {
-      if (n < 2) {
-        return false;
-      }
-
-      for (let j = n - 1; j >= 2; j -= 1) {
-        if (n % j === 0) {
-          return false;
-        }
-      }
-      return true;
-    };
 
     console.log(`Your answer: ${answer}`);
 
