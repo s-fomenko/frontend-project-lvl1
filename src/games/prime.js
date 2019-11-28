@@ -1,4 +1,9 @@
-import { getRandomInt, question, cons, isprime } from '../common';
+import {
+  getRandomInt,
+  question,
+  cons,
+  isprime,
+} from '../common';
 
 const brainPrime = (name) => {
   for (let i = 0; i < 3; i += 1) {
