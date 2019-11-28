@@ -12,7 +12,7 @@ export const cons = (type, terms) => (func) => func(type, terms);
 
 export const isEven = (num) => num % 2 === 0;
 
-export const isprime = (num) => {
+export const isPrime = (num) => {
   if (num < 2) {
     return false;
   }

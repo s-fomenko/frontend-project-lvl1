@@ -1,7 +1,9 @@
 import terms from './config';
-import { isEven, question } from './common';
+import { question, isEven, isPrime } from './common';
 
 export default (gameType, termsText) => {
+  const checkType = termsText === 'brainEven' ? isEven : isPrime;
+
   console.log('Welcome to the Brain Games!');
   console.log(terms[termsText]);
 
@@ -15,7 +17,7 @@ export default (gameType, termsText) => {
 
     console.log(`Your answer: ${answer}`);
 
-    if ((isEven(data.num) && answer === 'yes') || (!isEven(data.num) && answer === 'no')) {
+    if ((checkType(data.num) && answer === 'yes') || (!checkType(data.num) && answer === 'no')) {
       console.log('Correct!');
     } else {
       return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answer === 'yes' ? 'no' : 'yes'}'. Let's try again, ${name}`);

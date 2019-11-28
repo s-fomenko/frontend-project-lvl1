@@ -1,4 +1,4 @@
-import { cons, getRandomInt } from '../common';
+import { getRandomInt, cons } from '../common';
 
 const brainEven = () => ({ num: getRandomInt(1, 99) });
 
