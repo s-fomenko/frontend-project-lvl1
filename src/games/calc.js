@@ -1,36 +1,26 @@
-import { getRandomInt, question, cons } from '../common';
+import { getRandomInt, cons } from '../common';
 
-const brainCalc = (name) => {
-  for (let i = 0; i < 3; i += 1) {
-    const num1 = getRandomInt(1, 100);
-    const num2 = getRandomInt(1, 100);
-    const type = getRandomInt(1, 4);
-    let result = 0;
-    let answer = '';
+const brainCalc = () => {
+  const data = {};
+  data.num1 = getRandomInt(1, 100);
+  data.num2 = getRandomInt(1, 100);
+  data.type = getRandomInt(1, 4);
 
-    switch (type) {
-      case 1:
-        answer = question(`Question: ${num1} + ${num2} `);
-        result = num1 + num2;
-        break;
-      case 2:
-        answer = question(`Question: ${num1} - ${num2} `);
-        result = num1 - num2;
-        break;
-      default:
-        answer = question(`Question: ${num1} * ${num2} `);
-        result = num1 * num2;
-    }
-
-    console.log(`Your answer: ${answer}`);
-
-    if (Number(answer) === result) {
-      console.log('Correct!');
-    } else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}`);
-    }
+  switch (data.type) {
+    case 1:
+      data.answer = `Question: ${data.num1} + ${data.num2} `;
+      data.result = data.num1 + data.num2;
+      break;
+    case 2:
+      data.answer = `Question: ${data.num1} - ${data.num2} `;
+      data.result = data.num1 - data.num2;
+      break;
+    default:
+      data.answer = `Question: ${data.num1} * ${data.num2} `;
+      data.result = data.num1 * data.num2;
   }
-  return console.log(`Congratulations, ${name}!`);
+
+  return data;
 };
 
 export default cons(brainCalc, 'brainCalc');

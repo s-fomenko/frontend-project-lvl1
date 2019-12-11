@@ -1,24 +1,11 @@
-import {
-  getRandomInt,
-  question,
-  cons,
-  isEven,
-} from '../common';
+import { getRandomInt, cons } from '../common';
 
-const brainEven = (name) => {
-  for (let i = 0; i < 3; i += 1) {
-    const num = getRandomInt(1, 99);
-    const answer = question(`Question: ${num} `);
+const brainEven = () => {
+  const data = {};
+  data.num = getRandomInt(1, 99);
+  data.answer = `Question: ${data.num} `;
 
-    console.log(`Your answer: ${answer}`);
-
-    if ((isEven(num) && answer === 'yes') || (!isEven(num) && answer === 'no')) {
-      console.log('Correct!');
-    } else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answer === 'yes' ? 'no' : 'yes'}'. Let's try again, ${name}`);
-    }
-  }
-  return console.log(`Congratulations, ${name}!`);
+  return data;
 };
 
 export default cons(brainEven, 'brainEven');
