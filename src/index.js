@@ -26,10 +26,10 @@ export default (gameType, termsText) => {
       } else {
         return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answer === 'yes' ? 'no' : 'yes'}'. Let's try again, ${name}`);
       }
-    } else if (Number(answer) === result) {
+    } else if (Number(answer) === data.result) {
       console.log('Correct!');
     } else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}`);
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${data.result}'. Let's try again, ${name}`);
     }
   }
   return console.log(`Congratulations, ${name}!`);
