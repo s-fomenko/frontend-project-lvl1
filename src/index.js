@@ -12,16 +12,24 @@ export default (gameType, termsText) => {
 
   for (let i = 0; i < 3; i += 1) {
     const data = gameType();
+
+    // TODO: Remove console
     console.log(data);
 
     const answer = question(data.answer);
 
     console.log(`Your answer: ${answer}`);
 
-    if ((checkType(data.num) && answer === 'yes') || (!checkType(data.num) && answer === 'no')) {
+    if (termsText === 'brainEven' || termsText === 'brainPrime') {
+      if ((checkType(data.num) && answer === 'yes') || (!checkType(data.num) && answer === 'no')) {
+        console.log('Correct!');
+      } else {
+        return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answer === 'yes' ? 'no' : 'yes'}'. Let's try again, ${name}`);
+      }
+    } else if (Number(answer) === result) {
       console.log('Correct!');
     } else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answer === 'yes' ? 'no' : 'yes'}'. Let's try again, ${name}`);
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${name}`);
     }
   }
   return console.log(`Congratulations, ${name}!`);
