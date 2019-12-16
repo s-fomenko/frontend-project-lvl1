@@ -1,6 +1,8 @@
 import { getRandomInt } from '../common';
 import game from '..';
 
+const termsProgression = 'What number is missing in the progression?\n';
+
 const brainProgression = () => {
   const data = {};
   data.start = getRandomInt(1, 100);
@@ -35,4 +37,4 @@ const brainProgression = () => {
   return data;
 };
 
-export default () => game(brainProgression, 'brainProgression');
+export default () => game(brainProgression, termsProgression);
