@@ -1,4 +1,7 @@
-import { getRandomInt, cons } from '../common';
+import getRandomInt from '../common';
+import game from '..';
+
+const termsCalc = 'What is the result of the expression?\n';
 
 const brainCalc = () => {
   const data = {};
@@ -23,4 +26,4 @@ const brainCalc = () => {
   return data;
 };
 
-export default cons(brainCalc, 'brainCalc');
+export default () => game(brainCalc, termsCalc);

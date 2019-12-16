@@ -1,11 +1,10 @@
-import terms from './config';
-import { question, isEven, isPrime } from './common';
+import readlineSync from 'readline-sync';
+
+const question = (text) => readlineSync.question(text);
 
 export default (gameType, termsText) => {
-  const checkType = termsText === 'brainEven' ? isEven : isPrime;
-
   console.log('Welcome to the Brain Games!');
-  console.log(terms[termsText]);
+  console.log(termsText);
 
   const name = question('May I have your name? ');
   console.log(`Hello, ${name}!\n`);
@@ -17,8 +16,8 @@ export default (gameType, termsText) => {
 
     console.log(`Your answer: ${answer}`);
 
-    if (termsText === 'brainEven' || termsText === 'brainPrime') {
-      if ((checkType(data.num) && answer === 'yes') || (!checkType(data.num) && answer === 'no')) {
+    if (data.type === 'even' || data.type === 'prime') {
+      if ((data.check && answer === 'yes') || (!data.check && answer === 'no')) {
         console.log('Correct!');
       } else {
         return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answer === 'yes' ? 'no' : 'yes'}'. Let's try again, ${name}`);
