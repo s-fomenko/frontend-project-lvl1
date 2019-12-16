@@ -1,4 +1,5 @@
-import { getRandomInt, cons } from '../common';
+import { getRandomInt } from '../common';
+import game from '..';
 
 const brainProgression = () => {
   const data = {};
@@ -34,4 +35,4 @@ const brainProgression = () => {
   return data;
 };
 
-export default cons(brainProgression, 'brainProgression');
+export default () => game(brainProgression, 'brainProgression');

@@ -1,4 +1,5 @@
-import { getRandomInt, cons } from '../common';
+import { getRandomInt } from '../common';
+import game from '..';
 
 const findGcd = (a, b) => {
   let n1 = a;
@@ -23,4 +24,4 @@ const brainGcd = () => {
   return data;
 };
 
-export default cons(brainGcd, 'brainGcd');
+export default () => game(brainGcd, 'brainGcd');
