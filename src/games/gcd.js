@@ -1,4 +1,4 @@
-import { getRandomInt } from '../common';
+import getRandomInt from '../common';
 import game from '..';
 
 const termsGcd = 'Find the greatest common divisor of given numbers.\n';
