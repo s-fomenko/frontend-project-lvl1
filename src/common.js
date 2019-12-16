@@ -6,7 +6,7 @@ export const getRandomInt = (a, b) => {
 
 export const cons = (type, terms) => (func) => func(type, terms);
 
-export const isEven = (num) => num % 2 === 0;
+// export const isEven = (num) => num % 2 === 0;
 
 export const isPrime = (num) => {
   if (num < 2) {
