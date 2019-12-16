@@ -1,4 +1,4 @@
-import { getRandomInt, cons } from '../common';
+import { getRandomInt } from '../common';
 import game from '..';
 
 const brainPrime = () => {
