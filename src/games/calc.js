@@ -1,6 +1,8 @@
 import { getRandomInt } from '../common';
 import game from '..';
 
+const termsCalc = 'What is the result of the expression?\n';
+
 const brainCalc = () => {
   const data = {};
   data.num1 = getRandomInt(1, 100);
@@ -24,4 +26,4 @@ const brainCalc = () => {
   return data;
 };
 
-export default () => game(brainCalc, 'brainCalc');
+export default () => game(brainCalc, termsCalc);
