@@ -1,5 +1,8 @@
+import readlineSync from 'readline-sync';
 import terms from './config';
-import { question, isEven, isPrime } from './common';
+import { isEven, isPrime } from './common';
+
+const question = (text) => readlineSync.question(text);
 
 export default (gameType, termsText) => {
   const checkType = termsText === 'brainEven' ? isEven : isPrime;
