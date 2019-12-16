@@ -1,4 +1,5 @@
 import { getRandomInt, cons } from '../common';
+import game from '..';
 
 const brainPrime = () => {
   const data = {};
@@ -8,4 +9,4 @@ const brainPrime = () => {
   return data;
 };
 
-export default cons(brainPrime, 'brainPrime');
+export default () => game(brainPrime, 'brainPrime');
