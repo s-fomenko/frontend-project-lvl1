@@ -2,6 +2,7 @@ import getRandomInt from '../common';
 import game from '..';
 
 const termsProgression = 'What number is missing in the progression?';
+const progressionLength = 10;
 
 const brainProgression = () => {
   const data = {};
@@ -13,7 +14,7 @@ const brainProgression = () => {
     let progressionStep = a;
     let progression = `${a} `;
 
-    for (let j = 1; j < 10; j += 1) {
+    for (let j = 1; j < progressionLength; j += 1) {
       progressionStep += b;
       progression += `${progressionStep} `;
     }
