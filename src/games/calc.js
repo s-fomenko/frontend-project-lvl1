@@ -1,7 +1,7 @@
 import getRandomInt from '../common';
 import game from '..';
 
-const termsCalc = 'What is the result of the expression?\n';
+const termsCalc = 'What is the result of the expression?';
 
 const brainCalc = () => {
   const data = {};

@@ -4,7 +4,7 @@ const question = (text) => readlineSync.question(text);
 
 export default (gameType, termsText) => {
   console.log('Welcome to the Brain Games!');
-  console.log(termsText);
+  console.log(`${termsText}\n`);
 
   const name = question('May I have your name? ');
   console.log(`Hello, ${name}!\n`);

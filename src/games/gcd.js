@@ -1,7 +1,7 @@
 import getRandomInt from '../common';
 import game from '..';
 
-const termsGcd = 'Find the greatest common divisor of given numbers.\n';
+const termsGcd = 'Find the greatest common divisor of given numbers.';
 
 const findGcd = (a, b) => {
   let n1 = a;
