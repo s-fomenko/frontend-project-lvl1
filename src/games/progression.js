@@ -31,7 +31,7 @@ const brainProgression = () => {
     return strToArr.join(' ');
   };
 
-  data.answer = `Question: ${hideNumber(createProgression(data.start, data.step))} `;
+  data.answer = hideNumber(createProgression(data.start, data.step));
   data.result = getAnswer(createProgression(data.start, data.step));
 
   return data;

@@ -8,7 +8,7 @@ const brainEven = () => {
   const data = {};
   data.type = 'even';
   data.num = getRandomInt(1, 99);
-  data.answer = `Question: ${data.num} `;
+  data.answer = data.num;
   data.check = isEven(data.num);
 
   return data;

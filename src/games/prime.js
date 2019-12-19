@@ -20,7 +20,7 @@ const brainPrime = () => {
   const data = {};
   data.type = 'prime';
   data.num = getRandomInt(1, 99);
-  data.answer = `Question: ${data.num} `;
+  data.answer = data.num;
   data.check = isPrime(data.num);
 
   return data;
