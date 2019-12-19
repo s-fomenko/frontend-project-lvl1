@@ -16,7 +16,7 @@ const brainProgression = () => {
 
     for (let j = 1; j < progressionLength; j += 1) {
       progressionStep += b;
-      progression += `${progressionStep} `;
+      progression = `${progression + progressionStep} `;
     }
     return progression.substr(0, progression.length - 1);
   };
