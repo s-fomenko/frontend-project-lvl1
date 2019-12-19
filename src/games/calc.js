@@ -2,12 +2,13 @@ import getRandomInt from '../common';
 import game from '..';
 
 const termsCalc = 'What is the result of the expression?';
+const numberOfOperations = 4;
 
 const brainCalc = () => {
   const data = {};
   data.num1 = getRandomInt(1, 100);
   data.num2 = getRandomInt(1, 100);
-  data.type = getRandomInt(1, 4);
+  data.type = getRandomInt(1, numberOfOperations);
 
   switch (data.type) {
     case 1:
