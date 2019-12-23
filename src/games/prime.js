@@ -18,10 +18,10 @@ const isPrime = (num) => {
 
 const brainPrime = () => {
   const data = {};
-  data.type = 'prime';
+  // data.type = 'prime';
   data.num = getRandomInt(1, 99);
   data.answer = data.num;
-  data.check = isPrime(data.num);
+  data.result = isPrime(data.num) ? 'yes' : 'no';
 
   return data;
 };
