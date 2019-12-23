@@ -1,25 +1,13 @@
-import getRandomInt from '../common';
+import { getRandomInt, createProgression } from '../common';
 import game from '..';
 
 const termsProgression = 'What number is missing in the progression?';
-const progressionLength = 10;
 
 const brainProgression = () => {
   const data = {};
   data.start = getRandomInt(1, 99);
   data.step = getRandomInt(1, 9);
   data.randomIndex = getRandomInt(0, 9);
-
-  const createProgression = (a, b) => {
-    let progressionStep = a;
-    let progression = `${a} `;
-
-    for (let j = 1; j < progressionLength; j += 1) {
-      progressionStep += b;
-      progression = `${progression + progressionStep} `;
-    }
-    return progression.substr(0, progression.length - 1);
-  };
 
   const getAnswer = (str) => {
     const strToArr = str.split(' ');

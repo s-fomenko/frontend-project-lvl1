@@ -1,4 +1,4 @@
-import getRandomInt from '../common';
+import { getRandomInt } from '../common';
 import game from '..';
 
 const termsPrime = 'Answer "yes" if given number is prime. Otherwise answer "no".';
