@@ -6,9 +6,9 @@ const progressionLength = 10;
 
 const brainProgression = () => {
   const data = {};
-  data.start = getRandomInt(1, 100);
-  data.step = getRandomInt(1, 10);
-  data.randomIndex = getRandomInt(0, 10);
+  data.start = getRandomInt(1, 99);
+  data.step = getRandomInt(1, 9);
+  data.randomIndex = getRandomInt(0, 9);
 
   const createProgression = (a, b) => {
     let progressionStep = a;

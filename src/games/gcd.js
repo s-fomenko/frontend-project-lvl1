@@ -18,8 +18,8 @@ const findGcd = (a, b) => {
 
 const brainGcd = () => {
   const data = {};
-  data.num1 = getRandomInt(1, 100);
-  data.num2 = getRandomInt(1, 100);
+  data.num1 = getRandomInt(1, 99);
+  data.num2 = getRandomInt(1, 99);
   data.answer = `${data.num1} ${data.num2}`;
   data.result = findGcd(data.num1, data.num2);
 
