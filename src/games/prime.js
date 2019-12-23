@@ -1,7 +1,7 @@
-import getRandomInt from '../common';
+import { getRandomInt } from '../common';
 import game from '..';
 
-const termsPrime = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
+const termsPrime = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (num) => {
   if (num < 2) {
     return false;
@@ -18,10 +18,10 @@ const isPrime = (num) => {
 
 const brainPrime = () => {
   const data = {};
-  data.type = 'prime';
+  // data.type = 'prime';
   data.num = getRandomInt(1, 99);
-  data.answer = `Question: ${data.num} `;
-  data.check = isPrime(data.num);
+  data.answer = data.num;
+  data.result = isPrime(data.num) ? 'yes' : 'no';
 
   return data;
 };

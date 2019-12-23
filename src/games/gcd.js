@@ -1,7 +1,7 @@
-import getRandomInt from '../common';
+import { getRandomInt } from '../common';
 import game from '..';
 
-const termsGcd = 'Find the greatest common divisor of given numbers.\n';
+const termsGcd = 'Find the greatest common divisor of given numbers.';
 
 const findGcd = (a, b) => {
   let n1 = a;
@@ -18,9 +18,9 @@ const findGcd = (a, b) => {
 
 const brainGcd = () => {
   const data = {};
-  data.num1 = getRandomInt(1, 100);
-  data.num2 = getRandomInt(1, 100);
-  data.answer = `Question: ${data.num1} ${data.num2} `;
+  data.num1 = getRandomInt(1, 99);
+  data.num2 = getRandomInt(1, 99);
+  data.answer = `${data.num1} ${data.num2}`;
   data.result = findGcd(data.num1, data.num2);
 
   return data;
