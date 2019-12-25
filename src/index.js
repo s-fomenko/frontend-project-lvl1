@@ -12,7 +12,7 @@ export default (gameType, termsText) => {
   for (let i = 0; i < 3; i += 1) {
     const data = gameType();
 
-    const answer = question(`Question: ${data.answer} `);
+    const answer = question(`Question: ${data.question} `);
 
     console.log(`Your answer: ${answer}`);
 

@@ -12,15 +12,15 @@ const brainCalc = () => {
 
   switch (data.type) {
     case 1:
-      data.answer = `${data.num1} + ${data.num2}`;
+      data.question = `${data.num1} + ${data.num2}`;
       data.result = data.num1 + data.num2;
       break;
     case 2:
-      data.answer = `${data.num1} - ${data.num2}`;
+      data.question = `${data.num1} - ${data.num2}`;
       data.result = data.num1 - data.num2;
       break;
     default:
-      data.answer = `${data.num1} * ${data.num2}`;
+      data.question = `${data.num1} * ${data.num2}`;
       data.result = data.num1 * data.num2;
   }
 

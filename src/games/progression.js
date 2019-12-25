@@ -20,7 +20,7 @@ const brainProgression = () => {
     return strToArr.join(' ');
   };
 
-  data.answer = hideNumber(createProgression(data.start, data.step));
+  data.question = hideNumber(createProgression(data.start, data.step));
   data.result = getAnswer(createProgression(data.start, data.step));
 
   return data;
