@@ -2,27 +2,14 @@ import getRandomInt from '../common';
 import game from '..';
 
 const termsCalc = 'What is the result of the expression?';
-const numberOfOperations = 3;
 
-const getOperation = () => {
-  const type = getRandomInt(1, numberOfOperations);
-  let operation = '';
+const operations = [
+  'addition',
+  'subtraction',
+  'multiplication',
+];
 
-  switch (type) {
-    case 1:
-      operation = 'addition';
-      break;
-    case 2:
-      operation = 'subtraction';
-      break;
-    case 3:
-      operation = 'multiplication';
-      break;
-    // no default
-  }
-
-  return operation;
-};
+const getOperation = () => operations[getRandomInt(0, operations.length - 1)];
 
 const createCalcGame = () => {
   const num1 = getRandomInt(1, 99);
