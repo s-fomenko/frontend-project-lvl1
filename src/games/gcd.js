@@ -17,11 +17,11 @@ const findGcd = (a, b) => {
 };
 
 const brainGcd = () => {
+  const num1 = getRandomInt(1, 99);
+  const num2 = getRandomInt(1, 99);
   const data = {};
-  data.num1 = getRandomInt(1, 99);
-  data.num2 = getRandomInt(1, 99);
-  data.question = `${data.num1} ${data.num2}`;
-  data.result = findGcd(data.num1, data.num2);
+  data.question = `${num1} ${num2}`;
+  data.result = findGcd(num1, num2);
 
   return data;
 };

@@ -25,22 +25,22 @@ const getOperation = () => {
 };
 
 const brainCalc = () => {
+  const num1 = getRandomInt(1, 99);
+  const num2 = getRandomInt(1, 99);
   const data = {};
-  data.num1 = getRandomInt(1, 99);
-  data.num2 = getRandomInt(1, 99);
 
   switch (getOperation()) {
     case 'addition':
-      data.question = `${data.num1} + ${data.num2}`;
-      data.result = data.num1 + data.num2;
+      data.question = `${num1} + ${num2}`;
+      data.result = num1 + num2;
       break;
     case 'subtraction':
-      data.question = `${data.num1} - ${data.num2}`;
-      data.result = data.num1 - data.num2;
+      data.question = `${num1} - ${num2}`;
+      data.result = num1 - num2;
       break;
     case 'multiplication':
-      data.question = `${data.num1} * ${data.num2}`;
-      data.result = data.num1 * data.num2;
+      data.question = `${num1} * ${num2}`;
+      data.result = num1 * num2;
       break;
     // no default
   }
