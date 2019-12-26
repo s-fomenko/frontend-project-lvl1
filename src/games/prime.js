@@ -1,4 +1,4 @@
-import { getRandomInt } from '../common';
+import getRandomInt from '../common';
 import game from '..';
 
 const termsPrime = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -7,7 +7,7 @@ const isPrime = (num) => {
     return false;
   }
 
-  for (let j = num - 1; j >= 2; j -= 1) {
+  for (let j = 2; j <= num - 1; j += 1) {
     if (num % j === 0) {
       return false;
     }
@@ -16,13 +16,13 @@ const isPrime = (num) => {
 };
 
 
-const brainPrime = () => {
+const createPrimeGame = () => {
+  const num = getRandomInt(1, 99);
   const data = {};
-  data.num = getRandomInt(1, 99);
-  data.answer = data.num;
-  data.result = isPrime(data.num) ? 'yes' : 'no';
+  data.question = num;
+  data.result = isPrime(num) ? 'yes' : 'no';
 
   return data;
 };
 
-export default () => game(brainPrime, termsPrime);
+export default () => game(createPrimeGame, termsPrime);

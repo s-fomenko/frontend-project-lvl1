@@ -1,29 +1,40 @@
-import { getRandomInt, createProgression } from '../common';
+import getRandomInt from '../common';
 import game from '..';
 
 const termsProgression = 'What number is missing in the progression?';
+const createProgression = (a, b) => {
+  const progressionLength = 10;
+  let progressionStep = a;
+  let progression = `${a} `;
 
-const brainProgression = () => {
+  for (let j = 1; j < progressionLength; j += 1) {
+    progressionStep += b;
+    progression = `${progression + progressionStep} `;
+  }
+  return progression.substr(0, progression.length - 1);
+};
+
+const createProgressionGame = () => {
+  const start = getRandomInt(1, 99);
+  const step = getRandomInt(1, 9);
+  const randomIndex = getRandomInt(0, 9);
   const data = {};
-  data.start = getRandomInt(1, 99);
-  data.step = getRandomInt(1, 9);
-  data.randomIndex = getRandomInt(0, 9);
 
   const getAnswer = (str) => {
-    const strToArr = str.split(' ');
-    return Number(strToArr[data.randomIndex]);
+    const arr = str.split(' ');
+    return Number(arr[randomIndex]);
   };
 
   const hideNumber = (str) => {
-    const strToArr = str.split(' ');
-    strToArr[data.randomIndex] = '..';
-    return strToArr.join(' ');
+    const arr = str.split(' ');
+    arr[randomIndex] = '..';
+    return arr.join(' ');
   };
 
-  data.answer = hideNumber(createProgression(data.start, data.step));
-  data.result = getAnswer(createProgression(data.start, data.step));
+  data.question = hideNumber(createProgression(start, step));
+  data.result = getAnswer(createProgression(start, step));
 
   return data;
 };
 
-export default () => game(brainProgression, termsProgression);
+export default () => game(createProgressionGame, termsProgression);

@@ -1,4 +1,4 @@
-import { getRandomInt } from '../common';
+import getRandomInt from '../common';
 import game from '..';
 
 const termsGcd = 'Find the greatest common divisor of given numbers.';
@@ -16,14 +16,14 @@ const findGcd = (a, b) => {
   return n1;
 };
 
-const brainGcd = () => {
+const createGcdGame = () => {
+  const num1 = getRandomInt(1, 99);
+  const num2 = getRandomInt(1, 99);
   const data = {};
-  data.num1 = getRandomInt(1, 99);
-  data.num2 = getRandomInt(1, 99);
-  data.answer = `${data.num1} ${data.num2}`;
-  data.result = findGcd(data.num1, data.num2);
+  data.question = `${num1} ${num2}`;
+  data.result = findGcd(num1, num2);
 
   return data;
 };
 
-export default () => game(brainGcd, termsGcd);
+export default () => game(createGcdGame, termsGcd);
