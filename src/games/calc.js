@@ -1,4 +1,4 @@
-import { getRandomInt } from '../common';
+import getRandomInt from '../common';
 import game from '..';
 
 const termsCalc = 'What is the result of the expression?';

@@ -1,4 +1,4 @@
-import { getRandomInt } from '../common';
+import getRandomInt from '../common';
 import game from '..';
 
 const termsEven = 'Answer "yes" if the number is even, otherwise answer "no".';
