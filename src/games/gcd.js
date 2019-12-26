@@ -16,7 +16,7 @@ const findGcd = (a, b) => {
   return n1;
 };
 
-const brainGcd = () => {
+const createGcdGame = () => {
   const num1 = getRandomInt(1, 99);
   const num2 = getRandomInt(1, 99);
   const data = {};
@@ -26,4 +26,4 @@ const brainGcd = () => {
   return data;
 };
 
-export default () => game(brainGcd, termsGcd);
+export default () => game(createGcdGame, termsGcd);

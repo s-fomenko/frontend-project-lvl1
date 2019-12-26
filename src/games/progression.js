@@ -14,7 +14,7 @@ const createProgression = (a, b) => {
   return progression.substr(0, progression.length - 1);
 };
 
-const brainProgression = () => {
+const createProgressionGame = () => {
   const start = getRandomInt(1, 99);
   const step = getRandomInt(1, 9);
   const randomIndex = getRandomInt(0, 9);
@@ -37,4 +37,4 @@ const brainProgression = () => {
   return data;
 };
 
-export default () => game(brainProgression, termsProgression);
+export default () => game(createProgressionGame, termsProgression);

@@ -24,7 +24,7 @@ const getOperation = () => {
   return operation;
 };
 
-const brainCalc = () => {
+const createCalcGame = () => {
   const num1 = getRandomInt(1, 99);
   const num2 = getRandomInt(1, 99);
   const data = {};
@@ -48,4 +48,4 @@ const brainCalc = () => {
   return data;
 };
 
-export default () => game(brainCalc, termsCalc);
+export default () => game(createCalcGame, termsCalc);

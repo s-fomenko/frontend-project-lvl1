@@ -4,7 +4,7 @@ import game from '..';
 const termsEven = 'Answer "yes" if the number is even, otherwise answer "no".';
 const isEven = (num) => num % 2 === 0;
 
-const brainEven = () => {
+const createEvenGame = () => {
   const num = getRandomInt(1, 99);
   const data = {};
   data.question = num;
@@ -13,4 +13,4 @@ const brainEven = () => {
   return data;
 };
 
-export default () => game(brainEven, termsEven);
+export default () => game(createEvenGame, termsEven);

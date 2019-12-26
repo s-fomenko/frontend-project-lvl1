@@ -16,7 +16,7 @@ const isPrime = (num) => {
 };
 
 
-const brainPrime = () => {
+const createPrimeGame = () => {
   const num = getRandomInt(1, 99);
   const data = {};
   data.question = num;
@@ -25,4 +25,4 @@ const brainPrime = () => {
   return data;
 };
 
-export default () => game(brainPrime, termsPrime);
+export default () => game(createPrimeGame, termsPrime);
