@@ -21,14 +21,14 @@ const brainProgression = () => {
   const data = {};
 
   const getAnswer = (str) => {
-    const strToArr = str.split(' ');
-    return Number(strToArr[randomIndex]);
+    const arr = str.split(' ');
+    return Number(arr[randomIndex]);
   };
 
   const hideNumber = (str) => {
-    const strToArr = str.split(' ');
-    strToArr[randomIndex] = '..';
-    return strToArr.join(' ');
+    const arr = str.split(' ');
+    arr[randomIndex] = '..';
+    return arr.join(' ');
   };
 
   data.question = hideNumber(createProgression(start, step));
