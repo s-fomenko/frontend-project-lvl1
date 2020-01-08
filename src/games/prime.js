@@ -17,10 +17,10 @@ const isPrime = (num) => {
 
 
 const createPrimeGame = () => {
-  const num = getRandomInt(1, 99);
+  const question = getRandomInt(1, 99);
   const data = {};
-  data.question = num;
-  data.result = isPrime(num) ? 'yes' : 'no';
+  data.question = question;
+  data.result = isPrime(question) ? 'yes' : 'no';
 
   return data;
 };
