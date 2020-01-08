@@ -4,9 +4,9 @@ import game from '..';
 const termsCalc = 'What is the result of the expression?';
 
 const operations = [
-  'addition',
-  'subtraction',
-  'multiplication',
+  '+',
+  '-',
+  '*',
 ];
 
 const getOperation = () => operations[getRandomInt(0, operations.length - 1)];
@@ -14,19 +14,18 @@ const getOperation = () => operations[getRandomInt(0, operations.length - 1)];
 const createCalcGame = () => {
   const num1 = getRandomInt(1, 99);
   const num2 = getRandomInt(1, 99);
+  const operation = getOperation();
   const data = {};
+  data.question = `${num1} ${operation} ${num2}`;
 
-  switch (getOperation()) {
-    case 'addition':
-      data.question = `${num1} + ${num2}`;
+  switch (operation) {
+    case '+':
       data.result = num1 + num2;
       break;
-    case 'subtraction':
-      data.question = `${num1} - ${num2}`;
+    case '-':
       data.result = num1 - num2;
       break;
-    case 'multiplication':
-      data.question = `${num1} * ${num2}`;
+    case '*':
       data.result = num1 * num2;
       break;
     // no default
