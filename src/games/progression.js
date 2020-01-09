@@ -21,14 +21,14 @@ const createProgressionGame = () => {
   const data = {};
 
   const getAnswer = (str) => {
-    const arr = str.split(' ');
-    return Number(arr[randomIndex]);
+    const array = str.split(' ');
+    return Number(array[randomIndex]);
   };
 
   const hideNumber = (str) => {
-    const arr = str.split(' ');
-    arr[randomIndex] = '..';
-    return arr.join(' ');
+    const array = str.split(' ');
+    array[randomIndex] = '..';
+    return array.join(' ');
   };
 
   data.question = hideNumber(createProgression(start, step));
