@@ -3,12 +3,12 @@ import game from '..';
 
 const termsProgression = 'What number is missing in the progression?';
 const progressionLength = 10;
-const createProgression = (a, b) => {
-  let progressionStep = a;
-  let progression = `${a} `;
+const createProgression = (start, step) => {
+  let progressionStep = start;
+  let progression = `${start} `;
 
   for (let j = 1; j < progressionLength; j += 1) {
-    progressionStep += b;
+    progressionStep += step;
     progression = `${progression + progressionStep} `;
   }
   return progression.substr(0, progression.length - 1);

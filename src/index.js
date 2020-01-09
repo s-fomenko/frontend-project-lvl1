@@ -11,6 +11,8 @@ export default (gameType, termsText) => {
 
   for (let i = 0; i < 3; i += 1) {
     const data = gameType();
+    // TODO: Удалить console.log
+    console.log(data);
 
     const answer = question(`Question: ${data.question} `);
 
