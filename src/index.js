@@ -19,7 +19,7 @@ export default (getGameData, termsText) => {
 
     console.log(`Your answer: ${answer}`);
 
-    if (answer === String(data.result)) {
+    if (answer === data.result) {
       console.log('Correct!');
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${data.result}'. Let's try again, ${name}`);

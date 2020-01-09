@@ -20,13 +20,13 @@ const createCalcGame = () => {
 
   switch (operation) {
     case '+':
-      data.result = num1 + num2;
+      data.result = String(num1 + num2);
       break;
     case '-':
-      data.result = num1 - num2;
+      data.result = String(num1 - num2);
       break;
     case '*':
-      data.result = num1 * num2;
+      data.result = String(num1 * num2);
       break;
     // no default
   }

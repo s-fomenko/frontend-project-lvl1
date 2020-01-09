@@ -32,7 +32,7 @@ const createProgressionGame = () => {
   };
 
   data.question = hideNumber(createProgression(start, step));
-  data.result = getAnswer(createProgression(start, step));
+  data.result = String(getAnswer(createProgression(start, step)));
 
   return data;
 };
