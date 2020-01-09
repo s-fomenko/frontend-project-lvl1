@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 const question = (text) => readlineSync.question(text);
 const numberOfRounds = 3;
 
-export default (gameType, termsText) => {
+export default (getGameData, termsText) => {
   console.log('Welcome to the Brain Games!');
   console.log(`${termsText}\n`);
 
@@ -11,7 +11,7 @@ export default (gameType, termsText) => {
   console.log(`Hello, ${name}!\n`);
 
   for (let i = 0; i < numberOfRounds; i += 1) {
-    const data = gameType();
+    const data = getGameData();
     // TODO: Удалить console.log
     console.log(data);
 
