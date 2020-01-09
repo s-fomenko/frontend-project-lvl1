@@ -2,8 +2,8 @@ import getRandomInt from '../common';
 import game from '..';
 
 const termsProgression = 'What number is missing in the progression?';
+const progressionLength = 10;
 const createProgression = (a, b) => {
-  const progressionLength = 10;
   let progressionStep = a;
   let progression = `${a} `;
 
