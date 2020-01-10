@@ -12,8 +12,6 @@ export default (getGameData, termsText) => {
 
   for (let i = 0; i < numberOfRounds; i += 1) {
     const data = getGameData();
-    // TODO: Удалить console.log
-    console.log(data);
 
     const answer = question(`Question: ${data.question} `);
 

@@ -5,9 +5,9 @@ const termsProgression = 'What number is missing in the progression?';
 const progressionLength = 10;
 const createProgression = (start, step) => {
   let progressionStep = start;
-  let progression = `${start} `;
+  let progression = '';
 
-  for (let j = 1; j < progressionLength; j += 1) {
+  for (let j = 0; j < progressionLength; j += 1) {
     progressionStep += step;
     progression = `${progression + progressionStep} `;
   }
