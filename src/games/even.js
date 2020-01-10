@@ -5,10 +5,10 @@ const termsEven = 'Answer "yes" if the number is even, otherwise answer "no".';
 const isEven = (num) => num % 2 === 0;
 
 const createEvenGame = () => {
-  const num = getRandomInt(1, 99);
+  const question = getRandomInt(1, 99);
   const data = {};
-  data.question = num;
-  data.result = isEven(num) ? 'yes' : 'no';
+  data.question = question;
+  data.result = isEven(question) ? 'yes' : 'no';
 
   return data;
 };
