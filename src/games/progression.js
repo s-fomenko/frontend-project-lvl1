@@ -17,7 +17,7 @@ const createProgression = (start, step) => {
 const createProgressionGame = () => {
   const start = getRandomInt(1, 99);
   const step = getRandomInt(1, 9);
-  const randomIndex = getRandomInt(0, 9);
+  const randomIndex = getRandomInt(0, progressionLength - 1);
   const data = {};
 
   const getAnswer = (str) => {
