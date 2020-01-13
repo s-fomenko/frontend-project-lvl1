@@ -30,10 +30,11 @@ const hideNumber = (string) => {
 const createProgressionGame = () => {
   const start = getRandomInt(1, 99);
   const step = getRandomInt(1, 9);
+  const progression = createProgression(start, step);
   const data = {};
 
-  data.question = hideNumber(createProgression(start, step));
-  data.result = String(getAnswer(createProgression(start, step)));
+  data.question = hideNumber(progression);
+  data.result = String(getAnswer(progression));
 
   return data;
 };
