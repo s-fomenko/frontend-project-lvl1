@@ -13,17 +13,20 @@ const createProgression = (start, step) => {
     progressionStep += step;
     progression = `${progression + progressionStep} `;
   }
+
   return progression.substr(0, progression.length - 1);
 };
 
 const getAnswer = (string) => {
   const array = string.split(' ');
+
   return Number(array[randomIndex]);
 };
 
 const hideNumber = (string) => {
   const array = string.split(' ');
   array[randomIndex] = '..';
+
   return array.join(' ');
 };
 
@@ -32,7 +35,6 @@ const createProgressionGame = () => {
   const step = getRandomInt(1, 9);
   const progression = createProgression(start, step);
   const data = {};
-
   data.question = hideNumber(progression);
   data.result = String(getAnswer(progression));
 

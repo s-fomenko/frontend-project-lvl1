@@ -6,6 +6,7 @@ const termsGcd = 'Find the greatest common divisor of given numbers.';
 const findGcd = (a, b) => {
   let n1 = a;
   let n2 = b;
+
   while (n1 !== n2) {
     if (n1 > n2) {
       n1 -= n2;
@@ -13,6 +14,7 @@ const findGcd = (a, b) => {
       n2 -= n1;
     }
   }
+
   return n1;
 };
 
