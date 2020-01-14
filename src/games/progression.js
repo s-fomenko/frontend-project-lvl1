@@ -11,7 +11,7 @@ const createProgression = (start, step) => {
 
   for (let j = 0; j < progressionLength; j += 1) {
     progressionItem += step;
-    progression = `${progression + progressionItem} `;
+    progression += `${progressionItem} `;
   }
 
   return progression.substr(0, progression.length - 1);
