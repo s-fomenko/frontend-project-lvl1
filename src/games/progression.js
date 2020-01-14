@@ -6,12 +6,12 @@ const progressionLength = 10;
 const randomIndex = getRandomInt(0, progressionLength - 1);
 
 const createProgression = (start, step) => {
-  let progressionStep = start;
+  let progressionItem = start;
   let progression = '';
 
   for (let j = 0; j < progressionLength; j += 1) {
-    progressionStep += step;
-    progression = `${progression + progressionStep} `;
+    progressionItem += step;
+    progression = `${progression + progressionItem} `;
   }
 
   return progression.substr(0, progression.length - 1);
