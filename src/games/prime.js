@@ -2,6 +2,7 @@ import getRandomInt from '../common';
 import game from '..';
 
 const termsPrime = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 const isPrime = (num) => {
   if (num < 2) {
     return false;
@@ -12,9 +13,9 @@ const isPrime = (num) => {
       return false;
     }
   }
+
   return true;
 };
-
 
 const createPrimeGame = () => {
   const question = getRandomInt(1, 99);
