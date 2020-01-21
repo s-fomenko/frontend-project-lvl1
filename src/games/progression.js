@@ -6,28 +6,28 @@ const progressionLength = 10;
 const randomIndex = getRandomInt(0, progressionLength - 1);
 
 const createProgression = (start, step) => {
-  let progressionItem = start;
+  let currentItem = start;
   let progression = '';
 
   for (let j = 0; j < progressionLength; j += 1) {
-    progressionItem += step;
-    progression += `${progressionItem} `;
+    currentItem += step;
+    progression = `${progression + currentItem} `;
   }
 
   return progression.substr(0, progression.length - 1);
 };
 
-const getAnswer = (string) => {
-  const array = string.split(' ');
+const getAnswer = (progression) => {
+  const result = progression.split(' ');
 
-  return Number(array[randomIndex]);
+  return Number(result[randomIndex]);
 };
 
-const hideNumber = (string) => {
-  const array = string.split(' ');
-  array[randomIndex] = '..';
+const hideNumber = (progression) => {
+  const result = progression.split(' ');
+  result[randomIndex] = '..';
 
-  return array.join(' ');
+  return result.join(' ');
 };
 
 const createProgressionGame = () => {
