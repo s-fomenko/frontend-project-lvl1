@@ -8,3 +8,19 @@
 
 ## Installation guide
 [![asciicast](https://asciinema.org/a/whu6mCjRkytG95ZBOfPjLlFSD.svg)](https://asciinema.org/a/whu6mCjRkytG95ZBOfPjLlFSD)
+
+## Instalation steps:
+1. `make install`
+1. `npm run build`
+1. `npm link`
+1. `game name`
+
+## Game launch
+- `game name`
+
+## Games list
+- brain-calc
+- brain-even
+- brain-gcd
+- brain-prime
+- brain-progression
