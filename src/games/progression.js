@@ -17,17 +17,17 @@ const createProgression = (start, step) => {
   return progression.substr(0, progression.length - 1);
 };
 
-const getAnswer = (string) => {
-  const array = string.split(' ');
+const getAnswer = (progression) => {
+  const result = progression.split(' ');
 
-  return Number(array[randomIndex]);
+  return Number(result[randomIndex]);
 };
 
-const hideNumber = (string) => {
-  const array = string.split(' ');
-  array[randomIndex] = '..';
+const hideNumber = (progression) => {
+  const result = progression.split(' ');
+  result[randomIndex] = '..';
 
-  return array.join(' ');
+  return result.join(' ');
 };
 
 const createProgressionGame = () => {
