@@ -23,7 +23,8 @@ export default (getGameData, termsText) => {
     if (answer === data.result) {
       console.log('Correct!');
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${data.result}'. Let's try again, ${name}`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${data.result}'.`);
+      console.log(`Let's try again, ${name}`);
       return;
     }
   }
