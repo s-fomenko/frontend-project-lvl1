@@ -1,4 +1,10 @@
 # Brain games
+Учебный проект в рамках курса "Фронтенд-разработчик"
+
+[Хекслет](https://ru.hexlet.io/)
+
+## Используемые технологии:
+- JavaScript
 
 ## Code climate
 [![Maintainability](https://api.codeclimate.com/v1/badges/efc34f7edb11ad6985ca/maintainability)](https://codeclimate.com/github/s-fomenko/frontend-project-lvl1/maintainability)
